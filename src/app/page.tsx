@@ -6,7 +6,6 @@ import { ScratchCard } from '@/components/scratch-card';
 import { WhatsappIcon } from '@/components/icons/whatsapp-icon';
 import { Dialog, DialogContent } from '@/components/ui/dialog';
 import { Hourglass } from 'lucide-react';
-import { fbq } from '@/lib/fpixel';
 
 export default function Home() {
   const [headline] = useState('Venha surfar a nova onda das raspadinhas!');
@@ -23,7 +22,6 @@ export default function Home() {
         setCountdown(countdown - 1);
       }, 1000);
     } else if (isRedirecting && countdown === 0) {
-      fbq('track', 'Lead');
       window.location.href = whatsappLink;
     }
     return () => clearTimeout(timer);
