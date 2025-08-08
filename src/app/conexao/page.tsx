@@ -53,7 +53,7 @@ export default function ConexaoPage() {
                   Quero ser Dono
                 </Button>
                 <p className="text-xs text-muted-foreground">Toque no botão acima para falar com um especialista</p>
-                <div className="pt-4">
+                <div className="pt-4 flex flex-col items-center space-y-4">
                   <Image 
                     src="https://deuraspa.vip/logoig2.png" 
                     alt="Logo"
@@ -61,6 +61,16 @@ export default function ConexaoPage() {
                     height={50}
                     unoptimized
                   />
+                  <div className="text-center">
+                      <p className="text-sm text-muted-foreground">Grupo Awp</p>
+                      <Image
+                          src="http://wallacebasso.com.br/Design%20sem%20nome%20(7).png"
+                          alt="Logo Grupo Awp"
+                          width={50}
+                          height={50}
+                          className="mx-auto mt-2"
+                      />
+                  </div>
                 </div>
               </div>
             </div>
