@@ -26,7 +26,15 @@ export function ScratchCard() {
         context.font = 'bold 20px Inter, sans-serif';
         context.textAlign = 'center';
         context.textBaseline = 'middle';
-        context.fillText('RASPE AQUI!', canvas.width / 2, canvas.height / 2);
+        
+        const text = 'RASPE AQUI';
+        const lineHeight = 24;
+        const centerX = canvas.width / 2;
+        const startY = canvas.height / 2 - (lineHeight * 2);
+
+        for (let i = 0; i < 5; i++) {
+            context.fillText(text, centerX, startY + (i * lineHeight));
+        }
     }
 
     resizeCanvas();
