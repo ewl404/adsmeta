@@ -1,18 +1,43 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { ScratchCard } from '@/components/scratch-card';
 import { WhatsappIcon } from '@/components/icons/whatsapp-icon';
+import { Dialog, DialogContent } from '@/components/ui/dialog';
+import { Hourglass } from 'lucide-react';
+import { fbq } from '@/lib/fpixel';
 
 export default function Home() {
   const [headline] = useState('Venha surfar a nova onda das raspadinhas!');
   const [subheadline] = useState('Receba 70% de comissao sobre o montante que trazer!');
+  const [isRedirecting, setIsRedirecting] = useState(false);
+  const [countdown, setCountdown] = useState(3);
+
+  const whatsappLink =
+    'https://wa.me/1234567890?text=Ol%C3%A1!%20Tenho%20interesse%20em%20saber%20mais%20sobre%20a%20parceria%20de%20raspadinhas.';
+
+  useEffect(() => {
+    let timer: NodeJS.Timeout;
+    if (isRedirecting && countdown > 0) {
+      timer = setTimeout(() => {
+        setCountdown(countdown - 1);
+      }, 1000);
+    } else if (isRedirecting && countdown === 0) {
+      fbq('track', 'Lead');
+      window.location.href = whatsappLink;
+    }
+    return () => clearTimeout(timer);
+  }, [isRedirecting, countdown, whatsappLink]);
+
+  const handleButtonClick = () => {
+    setIsRedirecting(true);
+  };
 
   return (
-    <div className="flex flex-col min-h-screen bg-black">
+    <div className="flex flex-col min-h-dvh bg-black">
       <main className="flex-grow">
-        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 text-center">
+        <section className="w-full py-12 md:py-24 lg:py-32 text-center">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center space-y-8">
               <ScratchCard />
@@ -24,20 +49,17 @@ export default function Home() {
                   {subheadline}
                 </p>
               </div>
-              <Button
-                asChild
-                size="lg"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg py-8 px-10 rounded-full shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out"
-              >
-                <a
-                  href="https://wa.me/1234567890?text=Ol%C3%A1!%20Tenho%20interesse%20em%20saber%20mais%20sobre%20a%20parceria%20de%20raspadinhas."
-                  target="_blank"
-                  rel="noopener noreferrer"
+              <div className="flex flex-col items-center space-y-2">
+                <Button
+                  onClick={handleButtonClick}
+                  size="lg"
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg py-8 px-10 rounded-full shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out"
                 >
                   <WhatsappIcon className="mr-3 h-8 w-8" />
                   Fale Conosco
-                </a>
-              </Button>
+                </Button>
+                <p className="text-xs text-muted-foreground">Toque no botão acima para falar conosco</p>
+              </div>
             </div>
           </div>
         </section>
@@ -48,6 +70,17 @@ export default function Home() {
           &copy; {new Date().getFullYear()} Scratch2Cash. Todos os direitos reservados.
         </p>
       </footer>
+
+      <Dialog open={isRedirecting} onOpenChange={setIsRedirecting}>
+        <DialogContent className="sm:max-w-[425px] bg-background text-foreground border-border p-8 rounded-lg">
+          <div className="flex flex-col items-center justify-center text-center space-y-4">
+            <Hourglass className="h-16 w-16 text-primary animate-spin" />
+            <h3 className="text-2xl font-bold">Redirecionando para o WhatsApp...</h3>
+            <p className="text-5xl font-mono font-bold text-accent">{countdown}</p>
+            <p className="text-muted-foreground">Você será redirecionado em alguns instantes.</p>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }
