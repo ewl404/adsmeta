@@ -1,16 +1,32 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { WhatsappIcon } from '@/components/icons/whatsapp-icon';
-import { BadgeCheck } from 'lucide-react';
+import { BadgeCheck, Hourglass } from 'lucide-react';
 import Image from 'next/image';
 import { ConexaoScratchCard } from '@/components/conexao-scratch-card';
+import { Dialog, DialogContent } from '@/components/ui/dialog';
 
 export default function ConexaoPage() {
   const whatsappLink = 'https://wallacebasso.com.br/zap-raspa-venda.html';
+  const [isRedirecting, setIsRedirecting] = useState(false);
+  const [countdown, setCountdown] = useState(3);
+
+  useEffect(() => {
+    let timer: NodeJS.Timeout;
+    if (isRedirecting && countdown > 0) {
+      timer = setTimeout(() => {
+        setCountdown(countdown - 1);
+      }, 1000);
+    } else if (isRedirecting && countdown === 0) {
+      window.location.href = whatsappLink;
+    }
+    return () => clearTimeout(timer);
+  }, [isRedirecting, countdown, whatsappLink]);
 
   const handleButtonClick = () => {
-    window.location.href = whatsappLink;
+    setIsRedirecting(true);
   };
 
   const features = [
@@ -84,6 +100,16 @@ export default function ConexaoPage() {
           &copy; 2025 - Todos os direitos reservados.
         </p>
       </footer>
+      <Dialog open={isRedirecting} onOpenChange={setIsRedirecting}>
+        <DialogContent className="sm:max-w-[425px] bg-background text-foreground border-border p-8 rounded-lg">
+          <div className="flex flex-col items-center justify-center text-center space-y-4">
+            <Hourglass className="h-16 w-16 text-primary animate-spin" />
+            <h3 className="text-2xl font-bold">Redirecionando para o WhatsApp...</h3>
+            <p className="text-5xl font-mono font-bold text-accent">{countdown}</p>
+            <p className="text-muted-foreground">Você será redirecionado em alguns instantes.</p>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }
