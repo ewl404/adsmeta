@@ -14,7 +14,7 @@ export default function Home() {
   const [isRedirecting, setIsRedirecting] = useState(false);
   const [countdown, setCountdown] = useState(3);
 
-  const whatsappLink = 'https://wallacebasso.com.br/zap-raspa';
+  const whatsappLink = 'https://wallacebasso.com.br/zap-raspa.html';
 
   useEffect(() => {
     let timer: NodeJS.Timeout;
@@ -23,7 +23,6 @@ export default function Home() {
         setCountdown(countdown - 1);
       }, 1000);
     } else if (isRedirecting && countdown === 0) {
-      fbq('track', 'Lead');
       window.location.href = whatsappLink;
     }
     return () => clearTimeout(timer);
