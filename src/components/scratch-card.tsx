@@ -123,8 +123,13 @@ export function ScratchCard() {
       className="relative w-full max-w-md h-40 mx-auto rounded-lg overflow-hidden shadow-lg group"
       data-ai-hint="money prize"
     >
-      <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-r from-green-500 to-green-600 text-white text-2xl sm:text-3xl md:text-4xl font-black tracking-wider p-4">
-        70% DE COMISSÃO!
+      <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-r from-green-500 to-green-600 text-white p-4 text-center">
+        <span className="text-2xl sm:text-3xl md:text-4xl font-black tracking-wider">
+          70% DE COMISSÃO!
+        </span>
+        <div className="mt-2 bg-red-600 px-3 py-1 rounded">
+          <p className="text-sm font-semibold">Toque no botão e fale conosco!</p>
+        </div>
       </div>
       <canvas
         ref={canvasRef}
