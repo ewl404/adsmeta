@@ -6,7 +6,7 @@ import { BadgeCheck } from 'lucide-react';
 import Image from 'next/image';
 
 export default function ConexaoPage() {
-  const whatsappLink = 'https://wallacebasso.com.br/zap-raspa.html';
+  const whatsappLink = 'https://wallacebasso.com.br/zap-raspa-venda.html';
 
   const handleButtonClick = () => {
     window.location.href = whatsappLink;
