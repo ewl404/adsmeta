@@ -20,24 +20,24 @@ export default function ConexaoPage() {
 
   return (
     <div className="flex flex-col min-h-dvh bg-black">
-      <main className="flex-grow flex items-center justify-center">
-        <section className="w-full py-12 md:py-24 lg:py-32 text-center">
+      <main className="flex-grow flex items-center justify-center p-4">
+        <section className="w-full max-w-4xl text-center">
           <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center space-y-12">
+            <div className="flex flex-col items-center space-y-8">
               <div className="space-y-4">
                 <h1 className="text-4xl font-black tracking-tighter sm:text-5xl md:text-6xl text-accent animate-fade-in-down">
                   Deixe de ser afiliado e seja Dono!
                 </h1>
-                <p className="text-lg md:text-xl lg:text-2xl text-foreground/90 max-w-3xl mx-auto">
+                <p className="text-lg md:text-xl text-foreground/90 max-w-3xl mx-auto">
                   Tenha seu próprio sistema de raspadinhas, com sua marca, seu suporte e seus próprios afiliados.
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-2xl">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-2xl">
                 {features.map((feature) => (
-                  <div key={feature} className="flex items-center justify-center sm:justify-start gap-3 p-4 rounded-lg bg-gray-900/50">
-                    <BadgeCheck className="h-7 w-7 text-primary" />
-                    <span className="text-lg font-semibold text-foreground">{feature}</span>
+                  <div key={feature} className="flex items-center justify-center sm:justify-start gap-3 p-3 rounded-lg bg-gray-900/50">
+                    <BadgeCheck className="h-6 w-6 text-primary" />
+                    <span className="text-base font-semibold text-foreground">{feature}</span>
                   </div>
                 ))}
               </div>
@@ -57,7 +57,7 @@ export default function ConexaoPage() {
           </div>
         </section>
       </main>
-      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t border-gray-800">
+      <footer className="flex flex-col gap-2 sm:flex-row py-4 w-full shrink-0 items-center justify-center px-4 md:px-6 border-t border-gray-800">
         <p className="text-xs text-muted-foreground">
           &copy; {new Date().getFullYear()} Scratch2Cash. Todos os direitos reservados.
         </p>
