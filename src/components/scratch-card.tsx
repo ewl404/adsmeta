@@ -29,11 +29,12 @@ export function ScratchCard() {
         
         const text = 'RASPE AQUI';
         const lineHeight = 24;
-        const centerX = canvas.width / 2;
-        const startY = canvas.height / 2 - (lineHeight * 2);
+        const numRows = Math.floor(canvas.height / lineHeight);
 
-        for (let i = 0; i < 5; i++) {
-            context.fillText(text, centerX, startY + (i * lineHeight));
+        for (let i = 0; i < numRows; i++) {
+          const y = (i + 0.5) * lineHeight;
+          context.fillText(text, canvas.width / 4, y);
+          context.fillText(text, (canvas.width / 4) * 3, y);
         }
     }
 
