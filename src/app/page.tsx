@@ -6,6 +6,7 @@ import { ScratchCard } from '@/components/scratch-card';
 import { WhatsappIcon } from '@/components/icons/whatsapp-icon';
 import { Dialog, DialogContent } from '@/components/ui/dialog';
 import { Hourglass } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Home() {
   const [headline] = useState('Venha surfar a nova onda das raspadinhas!');
@@ -56,6 +57,18 @@ export default function Home() {
                   Fale Conosco
                 </Button>
                 <p className="text-xs text-muted-foreground">Toque no botão acima para falar conosco</p>
+              </div>
+              <div className="pt-4 flex flex-col items-center space-y-4">
+                  <div className="text-center">
+                      <p className="text-sm text-muted-foreground">Grupo Awp</p>
+                      <Image
+                          src="http://wallacebasso.com.br/Design%20sem%20nome%20(7).png"
+                          alt="Logo Grupo Awp"
+                          width={50}
+                          height={50}
+                          className="mx-auto mt-2"
+                      />
+                  </div>
               </div>
             </div>
           </div>
