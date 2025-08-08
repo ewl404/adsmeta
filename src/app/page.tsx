@@ -4,14 +4,13 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ScratchCard } from '@/components/scratch-card';
 import { WhatsappIcon } from '@/components/icons/whatsapp-icon';
-import { Separator } from '@/components/ui/separator';
 
 export default function Home() {
   const [headline] = useState('Venha surfar a nova onda das raspadinhas!');
   const [subheadline] = useState('Receba 70% de comissao sobre o montante que trazer!');
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-black">
       <main className="flex-grow">
         <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 text-center">
           <div className="container px-4 md:px-6">
@@ -44,7 +43,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
+      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t border-gray-800">
         <p className="text-xs text-muted-foreground">
           &copy; {new Date().getFullYear()} Scratch2Cash. Todos os direitos reservados.
         </p>
