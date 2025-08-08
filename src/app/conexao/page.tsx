@@ -29,7 +29,7 @@ export default function ConexaoPage() {
                 <h1 className="text-4xl font-black tracking-tighter sm:text-5xl md:text-6xl text-accent animate-fade-in-down">
                   Deixe de ser afiliado e seja Dono!
                 </h1>
-                <p className="text-base md:text-lg text-foreground/80 max-w-3xl mx-auto">
+                <p className="text-sm md:text-base text-foreground/80 max-w-3xl mx-auto">
                   Tenha seu próprio sistema de raspadinhas, com sua marca, seu suporte e seus próprios afiliados.
                 </p>
               </div>
@@ -69,7 +69,7 @@ export default function ConexaoPage() {
       </main>
       <footer className="flex flex-col gap-2 sm:flex-row py-4 w-full shrink-0 items-center justify-center px-4 md:px-6 border-t border-gray-800">
         <p className="text-xs text-muted-foreground">
-          &copy; {new Date().getFullYear()} Scratch2Cash. Todos os direitos reservados.
+          &copy; 2025 - Todos os direitos reservados.
         </p>
       </footer>
     </div>

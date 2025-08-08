@@ -64,7 +64,7 @@ export default function Home() {
 
       <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t border-gray-800">
         <p className="text-xs text-muted-foreground">
-          &copy; {new Date().getFullYear()} Scratch2Cash. Todos os direitos reservados.
+          &copy; 2025 - Todos os direitos reservados.
         </p>
       </footer>
 
