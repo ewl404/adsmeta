@@ -1,19 +1,14 @@
 'use client';
 
 import { useState } from 'react';
-import type { PersonalizeHeadlineOutput } from '@/ai/flows/personalize-headline';
 import { Button } from '@/components/ui/button';
 import { ScratchCard } from '@/components/scratch-card';
-import { PersonalizationSection } from '@/components/personalization-section';
 import { WhatsappIcon } from '@/components/icons/whatsapp-icon';
 import { Separator } from '@/components/ui/separator';
 
 export default function Home() {
-  const [content, setContent] = useState<PersonalizeHeadlineOutput>({
-    headline: 'Transforme Seus Seguidores em Lucro Imediato',
-    subheadline: 'Ganhe 70% de comissão vendendo raspadinhas online.',
-  });
-  const [isPersonalizing, setIsPersonalizing] = useState(false);
+  const [headline] = useState('Transforme Seus Seguidores em Lucro Imediato');
+  const [subheadline] = useState('Ganhe 70% de comissão vendendo raspadinhas online.');
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -24,10 +19,10 @@ export default function Home() {
               <ScratchCard />
               <div className="space-y-4 max-w-3xl mx-auto">
                 <h1 className="text-4xl font-black tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-accent animate-fade-in-down">
-                  {content.headline}
+                  {headline}
                 </h1>
                 <p className="text-lg md:text-xl lg:text-2xl text-foreground/90">
-                  {content.subheadline}
+                  {subheadline}
                 </p>
               </div>
               <Button
@@ -47,14 +42,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-        <Separator className="my-12" />
-
-        <PersonalizationSection
-          onContentUpdate={setContent}
-          isPersonalizing={isPersonalizing}
-          setIsPersonalizing={setIsPersonalizing}
-        />
       </main>
 
       <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
