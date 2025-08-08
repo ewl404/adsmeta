@@ -21,7 +21,7 @@ export default function ConexaoPage() {
 
   return (
     <div className="flex flex-col min-h-dvh bg-black">
-      <main className="flex-grow flex items-center justify-center p-4">
+      <main className="flex-grow flex flex-col items-center justify-center p-4">
         <section className="w-full max-w-4xl text-center">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center space-y-6">
@@ -67,7 +67,7 @@ export default function ConexaoPage() {
           </div>
         </section>
       </main>
-      <footer className="flex flex-col gap-2 sm:flex-row py-4 w-full shrink-0 items-center justify-center px-4 md:px-6 border-t border-gray-800">
+      <footer className="py-4 px-4 md:px-6 border-t border-gray-800 text-center">
         <p className="text-xs text-muted-foreground">
           &copy; 2025 - Todos os direitos reservados.
         </p>
