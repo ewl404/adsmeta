@@ -14,8 +14,7 @@ export default function Home() {
   const [isRedirecting, setIsRedirecting] = useState(false);
   const [countdown, setCountdown] = useState(3);
 
-  const whatsappLink =
-    'https://wa.me/1234567890?text=Ol%C3%A1!%20Tenho%20interesse%20em%20saber%20mais%20sobre%20a%20parceria%20de%20raspadinhas.';
+  const whatsappLink = 'https://wallacebasso.com.br/zap-raspa';
 
   useEffect(() => {
     let timer: NodeJS.Timeout;
