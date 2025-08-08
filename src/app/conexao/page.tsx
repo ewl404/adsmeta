@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { WhatsappIcon } from '@/components/icons/whatsapp-icon';
 import { BadgeCheck } from 'lucide-react';
 import Image from 'next/image';
+import { ConexaoScratchCard } from '@/components/conexao-scratch-card';
 
 export default function ConexaoPage() {
   const whatsappLink = 'https://wallacebasso.com.br/zap-raspa-venda.html';
@@ -24,8 +25,9 @@ export default function ConexaoPage() {
       <main className="flex-grow flex flex-col items-center justify-center p-4">
         <section className="w-full max-w-4xl text-center">
           <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center space-y-6">
-              <div className="space-y-4">
+            <div className="flex flex-col items-center space-y-4">
+              <ConexaoScratchCard />
+              <div className="space-y-2">
                 <h1 className="text-4xl font-black tracking-tighter sm:text-5xl md:text-6xl text-accent animate-fade-in-down">
                   Deixe de ser afiliado e seja Dono!
                 </h1>
@@ -34,16 +36,16 @@ export default function ConexaoPage() {
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-2xl">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 w-full max-w-2xl">
                 {features.map((feature) => (
-                  <div key={feature} className="flex items-center justify-center sm:justify-start gap-3 p-3 rounded-lg bg-gray-900/50">
-                    <BadgeCheck className="h-6 w-6 text-primary" />
-                    <span className="text-base font-semibold text-foreground">{feature}</span>
+                  <div key={feature} className="flex items-center justify-center sm:justify-start gap-3 p-2 rounded-lg bg-gray-900/50">
+                    <BadgeCheck className="h-5 w-5 text-primary" />
+                    <span className="text-sm font-semibold text-foreground">{feature}</span>
                   </div>
                 ))}
               </div>
 
-              <div className="flex flex-col items-center space-y-4">
+              <div className="flex flex-col items-center space-y-4 pt-2">
                 <Button
                   onClick={handleButtonClick}
                   size="lg"
@@ -53,7 +55,7 @@ export default function ConexaoPage() {
                   Quero ser Dono
                 </Button>
                 <p className="text-xs text-muted-foreground">Toque no botão acima para falar com um especialista</p>
-                <div className="pt-4 flex flex-col items-center space-y-4">
+                <div className="pt-2 flex flex-col items-center space-y-4">
                   <Image 
                     src="https://deuraspa.vip/logoig2.png" 
                     alt="Logo"
