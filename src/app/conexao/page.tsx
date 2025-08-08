@@ -3,6 +3,7 @@
 import { Button } from '@/components/ui/button';
 import { WhatsappIcon } from '@/components/icons/whatsapp-icon';
 import { BadgeCheck } from 'lucide-react';
+import Image from 'next/image';
 
 export default function ConexaoPage() {
   const whatsappLink = 'https://wallacebasso.com.br/zap-raspa.html';
@@ -23,12 +24,12 @@ export default function ConexaoPage() {
       <main className="flex-grow flex items-center justify-center p-4">
         <section className="w-full max-w-4xl text-center">
           <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center space-y-8">
+            <div className="flex flex-col items-center space-y-6">
               <div className="space-y-4">
                 <h1 className="text-4xl font-black tracking-tighter sm:text-5xl md:text-6xl text-accent animate-fade-in-down">
                   Deixe de ser afiliado e seja Dono!
                 </h1>
-                <p className="text-lg md:text-xl text-foreground/90 max-w-3xl mx-auto">
+                <p className="text-base md:text-lg text-foreground/80 max-w-3xl mx-auto">
                   Tenha seu próprio sistema de raspadinhas, com sua marca, seu suporte e seus próprios afiliados.
                 </p>
               </div>
@@ -42,7 +43,7 @@ export default function ConexaoPage() {
                 ))}
               </div>
 
-              <div className="flex flex-col items-center space-y-2">
+              <div className="flex flex-col items-center space-y-4">
                 <Button
                   onClick={handleButtonClick}
                   size="lg"
@@ -52,6 +53,15 @@ export default function ConexaoPage() {
                   Quero ser Dono
                 </Button>
                 <p className="text-xs text-muted-foreground">Toque no botão acima para falar com um especialista</p>
+                <div className="pt-4">
+                  <Image 
+                    src="https://deuraspa.vip/logoig2.png" 
+                    alt="Logo"
+                    width={150}
+                    height={50}
+                    unoptimized
+                  />
+                </div>
               </div>
             </div>
           </div>
