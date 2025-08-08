@@ -21,6 +21,12 @@ const nextConfig: NextConfig = {
         hostname: 'deuraspa.vip',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'http',
+        hostname: 'wallacebasso.com.br',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
