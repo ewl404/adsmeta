@@ -23,6 +23,7 @@ export default function Home() {
         setCountdown(countdown - 1);
       }, 1000);
     } else if (isRedirecting && countdown === 0) {
+      fbq('track', 'Lead');
       window.location.href = whatsappLink;
     }
     return () => clearTimeout(timer);
@@ -40,7 +41,7 @@ export default function Home() {
             <div className="flex flex-col items-center space-y-8">
               <ScratchCard />
               <div className="space-y-4 max-w-3xl mx-auto">
-                <h1 className="text-3xl font-black tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl text-accent animate-fade-in-down">
+                <h1 className="text-3xl font-black tracking-tighter sm:text-4xl md:text-5xl text-accent animate-fade-in-down">
                   {headline}
                 </h1>
                 <p className="text-lg md:text-xl lg:text-2xl text-foreground/90">
