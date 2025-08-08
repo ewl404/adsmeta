@@ -7,8 +7,8 @@ import { WhatsappIcon } from '@/components/icons/whatsapp-icon';
 import { Separator } from '@/components/ui/separator';
 
 export default function Home() {
-  const [headline] = useState('Transforme Seus Seguidores em Lucro Imediato');
-  const [subheadline] = useState('Ganhe 70% de comissão vendendo raspadinhas online.');
+  const [headline] = useState('Venha surfar a nova onda das raspadinhas!');
+  const [subheadline] = useState('Receba 70% de comissao sobre o montante que trazer!');
 
   return (
     <div className="flex flex-col min-h-screen">
