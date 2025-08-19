@@ -11,7 +11,7 @@ import { Dialog, DialogContent } from '@/components/ui/dialog';
 export default function ConexaoPage() {
   const whatsappLink = 'https://wallacebasso.com.br/zap-raspa-venda.html';
   const [isRedirecting, setIsRedirecting] = useState(false);
-  const [countdown, setCountdown] = useState(3);
+  const [countdown, setCountdown] = useState(2);
 
   useEffect(() => {
     let timer: NodeJS.Timeout;
@@ -48,7 +48,7 @@ export default function ConexaoPage() {
                   Deixe de ser afiliado e seja Dono!
                 </h1>
                 <p className="text-sm md:text-base text-foreground/80 max-w-3xl mx-auto">
-                  Tenha seu próprio sistema de raspadinhas, com sua marca, seu suporte e seus próprios afiliados.
+                  Sua própria plataforma de raspadinhas, com sua marca e suporte.
                 </p>
               </div>
 
@@ -101,7 +101,7 @@ export default function ConexaoPage() {
         </p>
       </footer>
       <Dialog open={isRedirecting} onOpenChange={setIsRedirecting}>
-        <DialogContent className="sm:max-w-[425px] bg-background text-foreground border-border p-8 rounded-lg">
+        <DialogContent className="sm:max-w-[425px] bg-background text-foreground border-border p-8 rounded-lg" showCloseButton={false}>
           <div className="flex flex-col items-center justify-center text-center space-y-4">
             <Hourglass className="h-16 w-16 text-primary animate-spin" />
             <h3 className="text-2xl font-bold">Redirecionando para o WhatsApp...</h3>
