@@ -12,9 +12,9 @@ export default function Zap2Page() {
   const [headline] = useState('Venha surfar a nova onda das raspadinhas!');
   const [subheadline] = useState('Receba 70% de comissao sobre o montante que trazer!');
   const [isRedirecting, setIsRedirecting] = useState(false);
-  const [countdown, setCountdown] = useState(3);
+  const [countdown, setCountdown] = useState(2);
 
-  const whatsappLink = 'https://wallacebasso.com.br/zap-raspa.html';
+  const whatsappLink = 'https://wallacebasso.com.br/zap-raspa2.html';
 
   useEffect(() => {
     let timer: NodeJS.Timeout;
