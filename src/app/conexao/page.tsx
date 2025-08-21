@@ -7,6 +7,7 @@ import { BadgeCheck, Hourglass } from 'lucide-react';
 import Image from 'next/image';
 import { ConexaoScratchCard } from '@/components/conexao-scratch-card';
 import { Dialog, DialogContent } from '@/components/ui/dialog';
+import { fbq } from '@/lib/fpixel';
 
 export default function ConexaoPage() {
   const whatsappLink = 'https://wallacebasso.com.br/zap-raspa-venda.html';
@@ -26,6 +27,7 @@ export default function ConexaoPage() {
   }, [isRedirecting, countdown, whatsappLink]);
 
   const handleButtonClick = () => {
+    fbq('trackCustom', 'chamounozap');
     setIsRedirecting(true);
   };
 

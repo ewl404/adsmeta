@@ -1,8 +1,8 @@
 'use client';
 
 type Fbq = (
-  event: 'track',
-  eventName: 'Lead' | 'PageView',
+  event: 'track' | 'trackCustom',
+  eventName: 'Lead' | 'PageView' | 'chamounozap',
   options?: Record<string, unknown>
 ) => void;
 

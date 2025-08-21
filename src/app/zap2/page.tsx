@@ -7,6 +7,7 @@ import { WhatsappIcon } from '@/components/icons/whatsapp-icon';
 import { Dialog, DialogContent } from '@/components/ui/dialog';
 import { Hourglass } from 'lucide-react';
 import Image from 'next/image';
+import { fbq } from '@/lib/fpixel';
 
 export default function Zap2Page() {
   const [headline] = useState('Venha surfar a nova onda das raspadinhas!');
@@ -29,6 +30,7 @@ export default function Zap2Page() {
   }, [isRedirecting, countdown, whatsappLink]);
 
   const handleButtonClick = () => {
+    fbq('trackCustom', 'chamounozap');
     setIsRedirecting(true);
   };
 

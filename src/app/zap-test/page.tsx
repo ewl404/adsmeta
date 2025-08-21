@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { ScratchCard } from '@/components/scratch-card';
 import { WhatsappIcon } from '@/components/icons/whatsapp-icon';
 import Image from 'next/image';
+import { fbq } from '@/lib/fpixel';
 
 export default function ZapTestPage() {
   const [headline] = useState('Venha surfar a nova onda das raspadinhas!');
@@ -13,6 +14,7 @@ export default function ZapTestPage() {
   const whatsappLink = 'https://api.whatsapp.com/send?phone=5516981729027&text=Ol%C3%A1!%20Tenho%20interesse%20em%20saber%20mais%20sobre%20a%20parceria%20de%20raspadinhas%2C%20pode%20me%20explicar%3F';
 
   const handleButtonClick = () => {
+    fbq('trackCustom', 'chamounozap');
     window.open(whatsappLink, '_blank');
   };
 
