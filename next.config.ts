@@ -27,6 +27,12 @@ const nextConfig: NextConfig = {
         hostname: 'wallacebasso.com.br',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'i.ibb.co',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
