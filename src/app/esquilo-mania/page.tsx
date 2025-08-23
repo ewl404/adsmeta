@@ -1,36 +1,20 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { WhatsappIcon } from '@/components/icons/whatsapp-icon';
-import { Dialog, DialogContent } from '@/components/ui/dialog';
-import { Hourglass } from 'lucide-react';
 import Image from 'next/image';
 import { fbq } from '@/lib/fpixel';
 
 export default function EsquiloManiaPage() {
   const [headline] = useState('Seja um afiliado Esquilo Mania!');
   const [subheadline] = useState('Receba 70% de comissão sobre o montante que trazer!');
-  const [isRedirecting, setIsRedirecting] = useState(false);
-  const [countdown, setCountdown] = useState(2);
 
-  const whatsappLink = 'https://wallacebasso.com.br/zap-raspa.html';
-
-  useEffect(() => {
-    let timer: NodeJS.Timeout;
-    if (isRedirecting && countdown > 0) {
-      timer = setTimeout(() => {
-        setCountdown(countdown - 1);
-      }, 1000);
-    } else if (isRedirecting && countdown === 0) {
-      window.location.href = whatsappLink;
-    }
-    return () => clearTimeout(timer);
-  }, [isRedirecting, countdown, whatsappLink]);
+  const whatsappLink = 'https://wallacebasso.com.br/zap-esquilo.html';
 
   const handleButtonClick = () => {
     fbq('trackCustom', 'chamounozap');
-    setIsRedirecting(true);
+    window.location.href = whatsappLink;
   };
 
   return (
@@ -42,8 +26,8 @@ export default function EsquiloManiaPage() {
               <Image 
                 src="https://i.ibb.co/GfjYkFYd/logo.png"
                 alt="Esquilo Mania Logo"
-                width={175}
-                height={75}
+                width={88}
+                height={38}
                 className="rounded-lg"
                 unoptimized
               />
@@ -88,17 +72,6 @@ export default function EsquiloManiaPage() {
           &copy; 2025 - Todos os direitos reservados.
         </p>
       </footer>
-
-      <Dialog open={isRedirecting} onOpenChange={setIsRedirecting}>
-        <DialogContent className="sm:max-w-[425px] bg-background text-foreground border-border p-8 rounded-lg" showCloseButton={false}>
-          <div className="flex flex-col items-center justify-center text-center space-y-4">
-            <Hourglass className="h-16 w-16 text-primary animate-spin" />
-            <h3 className="text-2xl font-bold">Redirecionando para o WhatsApp...</h3>
-            <p className="text-5xl font-mono font-bold text-accent">{countdown}</p>
-            <p className="text-muted-foreground">Você será redirecionado em alguns instantes.</p>
-          </div>
-        </DialogContent>
-      </Dialog>
     </div>
   );
 }
