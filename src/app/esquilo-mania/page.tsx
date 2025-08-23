@@ -26,8 +26,8 @@ export default function EsquiloManiaPage() {
               <Image 
                 src="https://i.ibb.co/GfjYkFYd/logo.png"
                 alt="Esquilo Mania Logo"
-                width={88}
-                height={38}
+                width={176}
+                height={76}
                 className="rounded-lg"
                 unoptimized
               />
