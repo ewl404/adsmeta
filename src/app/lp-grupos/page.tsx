@@ -9,7 +9,7 @@ import { fbq } from '@/lib/fpixel';
 
 export default function LpGruposPage() {
   
-  const whatsappLink = 'https://wallacebasso.com.br/zap-raspa.html';
+  const whatsappLink = 'https://devzapp.com.br/#/dev-zap-grupos/688ab828d17fb90001128ed1';
 
   const handleButtonClick = () => {
     fbq('trackCustom', 'entrounogrupo');
