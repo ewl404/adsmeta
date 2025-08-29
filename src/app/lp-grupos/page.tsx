@@ -4,7 +4,7 @@
 import { Button } from '@/components/ui/button';
 import { WhatsappIcon } from '@/components/icons/whatsapp-icon';
 import Image from 'next/image';
-import { BadgeCheck, Zap } from 'lucide-react';
+import { BadgeCheck, Zap, ArrowDown } from 'lucide-react';
 
 export default function LpGruposPage() {
   
@@ -31,7 +31,7 @@ export default function LpGruposPage() {
             ENTRE PARA O GRUPO E RECEBA ACESSO AO APP HACK DO MINES!
           </h1>
           
-          <div className="w-full max-w-[320px] px-4 transform transition-transform hover:scale-105 duration-300">
+          <div className="w-full max-w-[280px] px-4 transform transition-transform hover:scale-105 duration-300">
             <Image
               src="https://i.ibb.co/mC9kQFYP/Captura-de-tela-2025-08-26-170003.png"
               alt="Mines Game"
@@ -42,11 +42,11 @@ export default function LpGruposPage() {
             />
           </div>
 
-          <div className="flex flex-col items-center space-y-4 pt-4 w-full px-4">
-            <p className="text-base sm:text-lg font-semibold text-foreground/90">
+          <div className="flex flex-col items-center space-y-2 pt-4 w-full px-4">
+            <p className="text-sm sm:text-base font-semibold text-foreground/90">
                 Clique no botão abaixo para entrar no grupo exclusivo e receber seu acesso.
             </p>
-
+            <ArrowDown className="w-8 h-8 text-primary animate-bounce" />
             <Button
               onClick={handleButtonClick}
               size="lg"
@@ -55,7 +55,7 @@ export default function LpGruposPage() {
               <WhatsappIcon className="mr-3 h-8 w-8" />
               ENTRAR NO GRUPO AGORA
             </Button>
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
+            <div className="flex items-center gap-2 text-sm text-muted-foreground pt-2">
                 <BadgeCheck className="w-4 h-4 text-primary" />
                 <span>Acesso Imediato</span>
                 <BadgeCheck className="w-4 h-4 text-primary" />
