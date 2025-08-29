@@ -31,17 +31,6 @@ export default function LpGruposPage() {
             </h1>
           </div>
           
-          <div className="relative w-32 h-32 sm:w-36 sm:h-36">
-             <Image
-              src="https://picsum.photos/200"
-              alt="Profile"
-              width={200}
-              height={200}
-              className="rounded-full border-4 border-blue-500 shadow-lg"
-              data-ai-hint="man sunglasses"
-            />
-          </div>
-
           <div className="w-full px-4">
             <Image
               src="https://i.ibb.co/mC9kQFYP/Captura-de-tela-2025-08-26-170003.png"
