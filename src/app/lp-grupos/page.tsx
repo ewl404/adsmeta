@@ -31,12 +31,12 @@ export default function LpGruposPage() {
             ENTRE PARA O GRUPO E RECEBA ACESSO AO APP HACK DO MINES!
           </h1>
           
-          <div className="w-full px-4 transform transition-transform hover:scale-105 duration-300">
+          <div className="w-full max-w-[320px] px-4 transform transition-transform hover:scale-105 duration-300">
             <Image
               src="https://i.ibb.co/mC9kQFYP/Captura-de-tela-2025-08-26-170003.png"
               alt="Mines Game"
-              width={400}
-              height={500}
+              width={320}
+              height={400}
               className="rounded-lg shadow-[0_10px_30px_rgba(34,197,94,0.3)] w-full h-auto"
               priority
             />
