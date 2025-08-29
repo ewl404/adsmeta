@@ -50,7 +50,7 @@ export default function LpGruposPage() {
             <Button
               onClick={handleButtonClick}
               size="lg"
-              className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-extrabold text-lg py-8 px-10 rounded-lg shadow-[0_8px_25px_rgba(34,197,94,0.5)] transition-all duration-300 ease-in-out hover:shadow-[0_10px_40px_rgba(34,197,94,0.6)] animate-pulse-gentle"
+              className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-extrabold text-lg py-8 px-10 rounded-lg shadow-[0_8px_25px_rgba(34,197,94,0.5)] transition-all duration-300 ease-in-out hover:shadow-[0_10px_40px_rgba(34,197,94,0.6)]"
             >
               <WhatsappIcon className="mr-3 h-8 w-8" />
               ENTRAR NO GRUPO AGORA
