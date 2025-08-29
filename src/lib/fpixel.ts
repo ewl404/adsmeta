@@ -2,7 +2,7 @@
 
 type Fbq = (
   event: 'track' | 'trackCustom',
-  eventName: 'Lead' | 'PageView' | 'chamounozap',
+  eventName: 'Lead' | 'PageView' | 'chamounozap' | 'entrounogrupo',
   options?: Record<string, unknown>
 ) => void;
 

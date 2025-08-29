@@ -5,13 +5,14 @@ import { Button } from '@/components/ui/button';
 import { WhatsappIcon } from '@/components/icons/whatsapp-icon';
 import Image from 'next/image';
 import { BadgeCheck, Zap, ArrowDown } from 'lucide-react';
+import { fbq } from '@/lib/fpixel';
 
 export default function LpGruposPage() {
   
   const whatsappLink = 'https://wallacebasso.com.br/zap-raspa.html';
 
   const handleButtonClick = () => {
-    // fbq('trackCustom', 'entrounogrupo');
+    fbq('trackCustom', 'entrounogrupo');
     window.location.href = whatsappLink;
   };
 
