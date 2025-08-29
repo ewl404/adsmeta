@@ -12,7 +12,7 @@ export default function LpGruposPage() {
   const whatsappLink = 'https://devzapp.com.br/#/dev-zap-grupos/688ab828d17fb90001128ed1';
 
   const handleButtonClick = () => {
-    fbq('trackCustom', 'entrounogrupo');
+    fbq('track', 'Lead');
     window.location.href = whatsappLink;
   };
 
