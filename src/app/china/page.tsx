@@ -58,7 +58,7 @@ export default function ChinaPage() {
               ))}
           </div>
 
-          <div className="flex flex-col items-center space-y-4 pt-4 w-full px-4" style={{ marginTop: '-25px' }}>
+          <div className="flex flex-col items-center space-y-4 pt-4 w-full px-4" style={{ marginTop: '-22px' }}>
             <div className="text-center space-y-2">
                 <p className="text-lg font-bold text-white" style={{ position: 'relative', top: '3px' }}>
                     Fale comigo agora e comece com a 
