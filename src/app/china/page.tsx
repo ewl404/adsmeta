@@ -40,7 +40,7 @@ export default function ChinaPage() {
   return (
     <>
       <Script
-        id="fb-pixel-china"
+        id="fb-pixel-china-page"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
@@ -52,9 +52,16 @@ export default function ChinaPage() {
             t.src=v;s=b.getElementsByTagName(e)[0];
             s.parentNode.insertBefore(t,s)}(window, document,'script',
             'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '2448331412211737');
+            fbq('track', 'PageView');
           `,
         }}
       />
+      <noscript>
+        <img height="1" width="1" style={{display: 'none'}}
+          src="https://www.facebook.com/tr?id=2448331412211737&ev=PageView&noscript=1"
+        />
+      </noscript>
       <div className="flex flex-col min-h-dvh bg-black text-white selection:bg-primary/20">
         <main className="flex-grow flex flex-col items-center p-4 sm:p-6 font-body">
           <div className="w-full max-w-md mx-auto flex flex-col items-center text-center space-y-6">
@@ -71,8 +78,8 @@ export default function ChinaPage() {
               <Image
                 src="https://i.ibb.co/67YDFSx4/image-removebg-preview-23.png"
                 alt="Mines Game"
-                width={328}
-                height={243}
+                width={323}
+                height={238}
                 className="rounded-lg shadow-[0_10px_30px_rgba(34,197,94,0.3)] w-full h-auto"
                 priority
                 data-ai-hint="game interface"
