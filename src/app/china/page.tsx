@@ -37,7 +37,7 @@ export default function ChinaPage() {
             <p className="text-3xl sm:text-4xl font-black text-white">AGENTE <span className="text-green-400">30%</span></p>
           </div>
           
-          <div className="w-full max-w-[350px] px-4 transform transition-transform hover:scale-105 duration-300 -mt-10">
+          <div className="w-full max-w-[350px] px-4 transform transition-transform hover:scale-105 duration-300 -mt-10" style={{ marginTop: '-40px' }}>
             <Image
               src="https://i.ibb.co/67YDFSx4/image-removebg-preview-23.png"
               alt="Mines Game"
