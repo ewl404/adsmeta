@@ -37,28 +37,28 @@ export default function ChinaPage() {
             <p className="text-3xl sm:text-4xl font-black text-white" style={{ marginTop: '-3px' }}>AGENTE <span className="text-green-400">30%</span></p>
           </div>
           
-          <div className="w-full max-w-[345px] px-4 transform transition-transform hover:scale-105 duration-300" style={{ marginTop: '1px' }}>
+          <div className="w-full max-w-[340px] px-4 transform transition-transform hover:scale-105 duration-300" style={{ marginTop: '1px' }}>
             <Image
               src="https://i.ibb.co/67YDFSx4/image-removebg-preview-23.png"
               alt="Mines Game"
-              width={345}
-              height={259}
+              width={340}
+              height={254}
               className="rounded-lg shadow-[0_10px_30px_rgba(34,197,94,0.3)] w-full h-auto"
               priority
               data-ai-hint="game interface"
             />
           </div>
 
-          <div className="w-full space-y-1 text-left px-4" style={{ marginTop: '-3px' }}>
+          <div className="w-full space-y-1 text-center px-4" style={{ marginTop: '-3px' }}>
               {features.map((feature, index) => (
-                  <div key={index} className="flex items-center gap-2">
+                  <div key={index} className="flex items-center justify-center gap-2">
                       <CheckCircle2 className="w-4 h-4 text-green-400" />
                       <p className="text-sm font-semibold">{feature}</p>
                   </div>
               ))}
           </div>
 
-          <div className="flex flex-col items-center space-y-4 pt-4 w-full px-4" style={{ marginTop: '-19px' }}>
+          <div className="flex flex-col items-center space-y-4 pt-4 w-full px-4" style={{ marginTop: '-15px' }}>
             <div className="text-center space-y-2">
                 <p className="text-lg font-bold text-white" style={{ position: 'relative', top: '3px' }}>
                     Fale comigo agora e comece com a 
