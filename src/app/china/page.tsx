@@ -37,23 +37,23 @@ export default function ChinaPage() {
             <p className="text-3xl sm:text-4xl font-black text-white">AGENTE <span className="text-green-400">30%</span></p>
           </div>
           
-          <div className="w-full max-w-[300px] px-4 transform transition-transform hover:scale-105 duration-300">
+          <div className="w-full max-w-[200px] px-4 transform transition-transform hover:scale-105 duration-300">
             <Image
               src="https://i.ibb.co/67YDFSx4/image-removebg-preview-23.png"
               alt="Mines Game"
-              width={300}
-              height={225}
+              width={200}
+              height={150}
               className="rounded-lg shadow-[0_10px_30px_rgba(34,197,94,0.3)] w-full h-auto"
               priority
               data-ai-hint="game interface"
             />
           </div>
 
-          <div className="w-full space-y-2 text-left px-4">
+          <div className="w-full space-y-1 text-left px-4">
               {features.map((feature, index) => (
                   <div key={index} className="flex items-center gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-green-400" />
-                      <p className="text-base font-semibold">{feature}</p>
+                      <CheckCircle2 className="w-4 h-4 text-green-400" />
+                      <p className="text-sm font-semibold">{feature}</p>
                   </div>
               ))}
           </div>
