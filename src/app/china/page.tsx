@@ -37,12 +37,12 @@ export default function ChinaPage() {
             <p className="text-3xl sm:text-4xl font-black text-white" style={{ marginTop: '-3px' }}>AGENTE <span className="text-green-400">30%</span></p>
           </div>
           
-          <div className="w-full max-w-[350px] px-4 transform transition-transform hover:scale-105 duration-300" style={{ marginTop: '1px' }}>
+          <div className="w-full max-w-[345px] px-4 transform transition-transform hover:scale-105 duration-300" style={{ marginTop: '1px' }}>
             <Image
               src="https://i.ibb.co/67YDFSx4/image-removebg-preview-23.png"
               alt="Mines Game"
-              width={350}
-              height={263}
+              width={345}
+              height={259}
               className="rounded-lg shadow-[0_10px_30px_rgba(34,197,94,0.3)] w-full h-auto"
               priority
               data-ai-hint="game interface"
