@@ -49,7 +49,7 @@ export default function ChinaPage() {
             />
           </div>
 
-          <div className="w-full space-y-1 text-left px-4">
+          <div className="w-full space-y-1 text-left px-4" style={{ marginTop: '-3px' }}>
               {features.map((feature, index) => (
                   <div key={index} className="flex items-center gap-2">
                       <CheckCircle2 className="w-4 h-4 text-green-400" />
