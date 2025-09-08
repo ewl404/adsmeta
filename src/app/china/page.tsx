@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { WhatsappIcon } from '@/components/icons/whatsapp-icon';
 import { DollarSign, LayoutDashboard, Smartphone, LifeBuoy, ShieldCheck, Video } from 'lucide-react';
 import { fbq } from '@/lib/fpixel';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import Image from 'next/image';
 
 export default function ChinaPage() {
@@ -20,32 +20,26 @@ export default function ChinaPage() {
     {
       icon: <DollarSign className="h-6 w-6 text-primary" />,
       title: 'Pagamentos Diários',
-      description: 'Receba suas comissões de forma ágil e sem burocracia.',
     },
     {
       icon: <LayoutDashboard className="h-6 w-6 text-primary" />,
       title: 'Painel Completo Afiliado',
-      description: 'Acompanhe seus ganhos e métricas em tempo real com transparência.',
     },
      {
       icon: <Video className="h-6 w-6 text-primary" />,
       title: 'Saldo Demo para Gravar',
-      description: 'Crie conteúdo de qualidade para sua audiência sem custo.',
     },
     {
       icon: <Smartphone className="h-6 w-6 text-primary" />,
       title: 'Aplicativo Exclusivo',
-      description: 'Plataformas de alta performance e conversão na palma da sua mão.',
     },
     {
       icon: <LifeBuoy className="h-6 w-6 text-primary" />,
       title: 'Suporte 7x1',
-      description: 'Nossa equipe está pronta para te auxiliar a alcançar os melhores resultados.',
     },
     {
       icon: <ShieldCheck className="h-6 w-6 text-primary" />,
       title: 'Painel 100% Transparente',
-      description: 'Total clareza sobre suas comissões e o desempenho de suas campanhas.',
     },
   ];
 
@@ -64,22 +58,13 @@ export default function ChinaPage() {
                             className="w-24 h-24 sm:w-32 sm:h-32"
                         />
                     </div>
-                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-accent uppercase tracking-wide animate-fade-in-down">
-                        Parceria de Elite
-                    </h1>
-                    <CardDescription className="text-base sm:text-lg text-foreground/80 max-w-2xl mx-auto pt-2">
-                        Divulgue plataformas chinesas de alta performance e receba <strong className="text-primary font-bold">70% de comissão</strong> sobre todo o montante que você gerar.
-                    </CardDescription>
                 </CardHeader>
                 <CardContent className="p-6 sm:p-8 pt-0">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-8">
                         {features.map((feature, index) => (
-                        <div key={index} className="flex items-start text-left gap-4 p-4 rounded-lg bg-background/50 transition-colors hover:bg-gray-900">
+                        <div key={index} className="flex flex-col items-center text-center gap-2 p-4 rounded-lg bg-background/50 transition-colors hover:bg-gray-900">
                             {feature.icon}
-                            <div>
-                                <h3 className="font-bold text-lg text-foreground">{feature.title}</h3>
-                                <p className="text-sm text-muted-foreground">{feature.description}</p>
-                            </div>
+                            <h3 className="font-semibold text-sm text-foreground text-center">{feature.title}</h3>
                         </div>
                         ))}
                     </div>
