@@ -34,10 +34,10 @@ export default function ChinaPage() {
                 <span className="bg-red-600 px-4 rounded-md">BLOGUEIRO/AGENTE</span>
             </h1>
             <p className="text-4xl sm:text-5xl font-black text-white">COOPERAÇÃO <span className="text-green-400">70%</span></p>
-            <p className="text-3xl sm:text-4xl font-black text-white">AGENTE <span className="text-green-400">30%</span></p>
+            <p className="text-3xl sm:text-4xl font-black text-white" style={{ marginTop: '-3px' }}>AGENTE <span className="text-green-400">30%</span></p>
           </div>
           
-          <div className="w-full max-w-[350px] px-4 transform transition-transform hover:scale-105 duration-300" style={{ marginTop: '-19px' }}>
+          <div className="w-full max-w-[350px] px-4 transform transition-transform hover:scale-105 duration-300" style={{ marginTop: '-12px' }}>
             <Image
               src="https://i.ibb.co/67YDFSx4/image-removebg-preview-23.png"
               alt="Mines Game"
@@ -58,7 +58,7 @@ export default function ChinaPage() {
               ))}
           </div>
 
-          <div className="flex flex-col items-center space-y-4 pt-4 w-full px-4" style={{ marginTop: '-20px' }}>
+          <div className="flex flex-col items-center space-y-4 pt-4 w-full px-4" style={{ marginTop: '-25px' }}>
             <div className="text-center space-y-2">
                 <p className="text-lg font-bold text-white">
                     Fale comigo agora e comece com a 
