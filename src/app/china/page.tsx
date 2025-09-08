@@ -2,9 +2,10 @@
 
 import { Button } from '@/components/ui/button';
 import { WhatsappIcon } from '@/components/icons/whatsapp-icon';
-import { Award, BarChart, Users, Zap } from 'lucide-react';
+import { DollarSign, LayoutDashboard, Smartphone, LifeBuoy, ShieldCheck, Video } from 'lucide-react';
 import { fbq } from '@/lib/fpixel';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import Image from 'next/image';
 
 export default function ChinaPage() {
   
@@ -17,24 +18,34 @@ export default function ChinaPage() {
 
   const features = [
     {
-      icon: <BarChart className="h-6 w-6 text-primary" />,
-      title: '70% de Comissão',
-      description: 'Receba a maior fatia do bolo. Sua dedicação vale mais aqui.',
+      icon: <DollarSign className="h-6 w-6 text-primary" />,
+      title: 'Pagamentos Diários',
+      description: 'Receba suas comissões de forma ágil e sem burocracia.',
     },
     {
-      icon: <Award className="h-6 w-6 text-primary" />,
-      title: 'Plataformas Exclusivas',
-      description: 'Acesso a plataformas chinesas de alto desempenho e conversão.',
-    },
-    {
-      icon: <Users className="h-6 w-6 text-primary" />,
-      title: 'Suporte Dedicado',
-      description: 'Nossa equipe está pronta para te auxiliar a alcançar os melhores resultados.',
+      icon: <LayoutDashboard className="h-6 w-6 text-primary" />,
+      title: 'Painel Completo Afiliado',
+      description: 'Acompanhe seus ganhos e métricas em tempo real com transparência.',
     },
      {
-      icon: <Zap className="h-6 w-6 text-primary" />,
-      title: 'Pagamentos Rápidos',
-      description: 'Receba suas comissões de forma ágil e sem burocracia.',
+      icon: <Video className="h-6 w-6 text-primary" />,
+      title: 'Saldo Demo para Gravar',
+      description: 'Crie conteúdo de qualidade para sua audiência sem custo.',
+    },
+    {
+      icon: <Smartphone className="h-6 w-6 text-primary" />,
+      title: 'Aplicativo Exclusivo',
+      description: 'Plataformas de alta performance e conversão na palma da sua mão.',
+    },
+    {
+      icon: <LifeBuoy className="h-6 w-6 text-primary" />,
+      title: 'Suporte 7x1',
+      description: 'Nossa equipe está pronta para te auxiliar a alcançar os melhores resultados.',
+    },
+    {
+      icon: <ShieldCheck className="h-6 w-6 text-primary" />,
+      title: 'Painel 100% Transparente',
+      description: 'Total clareza sobre suas comissões e o desempenho de suas campanhas.',
     },
   ];
 
@@ -44,6 +55,15 @@ export default function ChinaPage() {
         <div className="w-full max-w-4xl mx-auto flex flex-col items-center text-center space-y-8">
             <Card className="w-full bg-gray-900/50 border-gray-800 shadow-2xl shadow-primary/10">
                 <CardHeader className="text-center p-6 sm:p-8">
+                    <div className="flex justify-center mb-4">
+                        <Image 
+                            src="https://i.ibb.co/67YDFSx4/image-removebg-preview-23.png"
+                            alt="Plataformas Chinesas"
+                            width={120}
+                            height={120}
+                            className="w-24 h-24 sm:w-32 sm:h-32"
+                        />
+                    </div>
                     <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-accent uppercase tracking-wide animate-fade-in-down">
                         Parceria de Elite
                     </h1>
