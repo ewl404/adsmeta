@@ -39,7 +39,7 @@ export default function ChinaPage() {
           
           <div className="w-full px-4 transform transition-transform hover:scale-105 duration-300">
             <Image
-              src="https://i.ibb.co/b3L4b8s/image.png"
+              src="https://i.ibb.co/67YDFSx4/image-removebg-preview-23.png"
               alt="Mines Game"
               width={400}
               height={300}
