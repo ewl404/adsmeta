@@ -37,12 +37,12 @@ export default function ChinaPage() {
             <p className="text-3xl sm:text-4xl font-black text-white">AGENTE <span className="text-green-400">30%</span></p>
           </div>
           
-          <div className="w-full max-w-[200px] px-4 transform transition-transform hover:scale-105 duration-300">
+          <div className="w-full max-w-[250px] px-4 transform transition-transform hover:scale-105 duration-300">
             <Image
               src="https://i.ibb.co/67YDFSx4/image-removebg-preview-23.png"
               alt="Mines Game"
-              width={200}
-              height={150}
+              width={250}
+              height={188}
               className="rounded-lg shadow-[0_10px_30px_rgba(34,197,94,0.3)] w-full h-auto"
               priority
               data-ai-hint="game interface"
