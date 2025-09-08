@@ -2,9 +2,8 @@
 
 import { Button } from '@/components/ui/button';
 import { WhatsappIcon } from '@/components/icons/whatsapp-icon';
-import { DollarSign, LayoutDashboard, Smartphone, LifeBuoy, ShieldCheck, Video } from 'lucide-react';
+import { CheckCircle2, MoveDown } from 'lucide-react';
 import { fbq } from '@/lib/fpixel';
-import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import Image from 'next/image';
 
 export default function ChinaPage() {
@@ -17,71 +16,70 @@ export default function ChinaPage() {
   };
 
   const features = [
-    {
-      icon: <DollarSign className="h-6 w-6 text-primary" />,
-      title: 'Pagamentos Diários',
-    },
-    {
-      icon: <LayoutDashboard className="h-6 w-6 text-primary" />,
-      title: 'Painel Completo Afiliado',
-    },
-     {
-      icon: <Video className="h-6 w-6 text-primary" />,
-      title: 'Saldo Demo para Gravar',
-    },
-    {
-      icon: <Smartphone className="h-6 w-6 text-primary" />,
-      title: 'Aplicativo Exclusivo',
-    },
-    {
-      icon: <LifeBuoy className="h-6 w-6 text-primary" />,
-      title: 'Suporte 7x1',
-    },
-    {
-      icon: <ShieldCheck className="h-6 w-6 text-primary" />,
-      title: 'Painel 100% Transparente',
-    },
+    'Pagamentos diários',
+    'Saldo Demo para gravar',
+    'Aplicativo Exclusivo',
+    'Painel Completo Afiliado',
+    'Suporte 7x1',
+    'Painel 100% transparente',
   ];
 
   return (
     <div className="flex flex-col min-h-dvh bg-black text-white selection:bg-primary/20">
-      <main className="flex-grow flex flex-col items-center justify-center p-4 sm:p-8 font-body">
-        <div className="w-full max-w-4xl mx-auto flex flex-col items-center text-center space-y-8">
-            <Card className="w-full bg-gray-900/50 border-gray-800 shadow-2xl shadow-primary/10">
-                <CardHeader className="text-center p-6 sm:p-8">
-                    <div className="flex justify-center mb-4">
-                        <Image 
-                            src="https://i.ibb.co/67YDFSx4/image-removebg-preview-23.png"
-                            alt="Plataformas Chinesas"
-                            width={120}
-                            height={120}
-                            className="w-24 h-24 sm:w-32 sm:h-32"
-                        />
-                    </div>
-                </CardHeader>
-                <CardContent className="p-6 sm:p-8 pt-0">
-                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-8">
-                        {features.map((feature, index) => (
-                        <div key={index} className="flex flex-col items-center text-center gap-2 p-4 rounded-lg bg-background/50 transition-colors hover:bg-gray-900">
-                            {feature.icon}
-                            <h3 className="font-semibold text-sm text-foreground text-center">{feature.title}</h3>
-                        </div>
-                        ))}
-                    </div>
+      <main className="flex-grow flex flex-col items-center p-4 sm:p-6 font-body">
+        <div className="w-full max-w-md mx-auto flex flex-col items-center text-center space-y-6">
 
-                    <div className="flex flex-col items-center space-y-4 pt-4 w-full max-w-md mx-auto">
-                        <Button
-                        onClick={handleButtonClick}
-                        size="lg"
-                        className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-extrabold text-lg py-8 px-10 rounded-lg shadow-[0_8px_25px_rgba(34,197,94,0.5)] transition-all duration-300 ease-in-out hover:shadow-[0_10px_40px_rgba(34,197,94,0.6)] hover:scale-105"
-                        >
-                        <WhatsappIcon className="mr-3 h-8 w-8" />
-                        FALE CONOSCO
-                        </Button>
-                        <p className="text-xs text-muted-foreground">Vagas limitadas. Garanta a sua agora!</p>
-                    </div>
-                </CardContent>
-            </Card>
+          <div className="text-center space-y-2">
+            <h1 className="text-3xl sm:text-4xl font-black uppercase">
+                <span className="bg-red-600 px-4 rounded-md">BLOGUEIRO/AGENTE</span>
+            </h1>
+            <p className="text-4xl sm:text-5xl font-black text-white">COOPERAÇÃO <span className="text-green-400">70%</span></p>
+            <p className="text-3xl sm:text-4xl font-black text-white">AGENTE <span className="text-green-400">30%</span></p>
+          </div>
+          
+          <div className="w-full px-4 transform transition-transform hover:scale-105 duration-300">
+            <Image
+              src="https://i.ibb.co/b3L4b8s/image.png"
+              alt="Mines Game"
+              width={400}
+              height={300}
+              className="rounded-lg shadow-[0_10px_30px_rgba(34,197,94,0.3)] w-full h-auto"
+              priority
+              data-ai-hint="game interface"
+            />
+          </div>
+
+          <div className="w-full space-y-2 text-left px-4">
+              {features.map((feature, index) => (
+                  <div key={index} className="flex items-center gap-2">
+                      <CheckCircle2 className="w-5 h-5 text-green-400" />
+                      <p className="text-base font-semibold">{feature}</p>
+                  </div>
+              ))}
+          </div>
+
+          <div className="flex flex-col items-center space-y-4 pt-4 w-full px-4">
+            <div className="text-center space-y-2">
+                <p className="text-lg font-bold text-white">
+                    Fale comigo agora e comece com a 
+                    <span className="bg-red-600 px-2 rounded-md ml-1">melhor proposta do mercado!</span>
+                </p>
+                <div className="flex justify-center items-center gap-2">
+                    <MoveDown className="w-6 h-6 text-yellow-400 animate-bounce" />
+                    <p className="text-xl font-bold text-yellow-400">Fale comigo aqui</p>
+                    <MoveDown className="w-6 h-6 text-yellow-400 animate-bounce" />
+                </div>
+            </div>
+            <Button
+              onClick={handleButtonClick}
+              size="lg"
+              className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-extrabold text-lg py-7 px-10 rounded-lg shadow-[0_8px_25px_rgba(34,197,94,0.5)] transition-all duration-300 ease-in-out hover:shadow-[0_10px_40px_rgba(34,197,94,0.6)] hover:scale-105"
+            >
+              <WhatsappIcon className="mr-3 h-8 w-8" />
+              FALE COMIGO
+            </Button>
+          </div>
+
         </div>
       </main>
       <footer className="py-4 px-4 text-center">
