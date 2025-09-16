@@ -11,7 +11,7 @@ import { useEffect } from 'react';
 
 export default function ChinaZap2Page() {
   
-  const whatsappLink = 'https://api.whatsapp.com/send?phone=5521960193438&text=Ol%C3%A1!%20Tenho%20interesse%20em%20saber%20mais%20sobre%20a%20parceria%20das%20plataformas...';
+  const whatsappLink = 'https://api.whatsapp.com/send?phone=5521960193420&text=Ol%C3%A1!%20Tenho%20interesse%20em%20saber%20mais%20sobre%20a%20parceria%20das%20plataformas...';
 
   useEffect(() => {
     // @ts-ignore
