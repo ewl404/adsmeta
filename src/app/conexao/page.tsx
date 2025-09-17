@@ -9,7 +9,7 @@ import { ConexaoScratchCard } from '@/components/conexao-scratch-card';
 import { fbq } from '@/lib/fpixel';
 
 export default function ConexaoPage() {
-  const whatsappLink = 'https://api.whatsapp.com/send?phone=5511967063708&text=Tenho%20interesse%20em%20ter%20meu%20proprio%20sistema%20de%20raspadinha%2C%20como%20funciona%3F';
+  const whatsappLink = 'https://api.whatsapp.com/send?phone=5521960193438&text=Tenho%20interesse%20em%20ter%20meu%20proprio%20sistema%20de%20raspadinha%2C%20como%20funciona%3F';
   
   const handleButtonClick = () => {
     fbq('trackCustom', 'chamounozap');
