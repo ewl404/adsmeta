@@ -38,14 +38,14 @@ export default function ConexaoPage() {
             t.src=v;s=b.getElementsByTagName(e)[0];
             s.parentNode.insertBefore(t,s)}(window, document,'script',
             'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '2448331412211737');
+            fbq('init', '1550609239684984');
             fbq('track', 'PageView');
           `,
         }}
       />
       <noscript>
         <img height="1" width="1" style={{display: 'none'}}
-          src="https://www.facebook.com/tr?id=2448331412211737&ev=PageView&noscript=1"
+          src="https://www.facebook.com/tr?id=1550609239684984&ev=PageView&noscript=1"
         />
       </noscript>
       <div className="flex flex-col min-h-dvh bg-black">
