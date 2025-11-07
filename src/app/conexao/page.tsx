@@ -75,7 +75,7 @@ export default function ConexaoPage() {
                 
                 <div className="space-y-3">
                   <h1 className="text-4xl font-black tracking-tighter sm:text-5xl md:text-6xl text-accent animate-fade-in-down">
-                    Tenha sua plataforma em 24h e pague após a entrega
+                    Tenha sua <span className="bg-red-600 text-white px-2 rounded-md">plataforma em 24h</span> e <span className="bg-red-600 text-white px-2 rounded-md">pague após a entrega</span>
                   </h1>
                 </div>
 
