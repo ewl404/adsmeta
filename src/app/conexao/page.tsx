@@ -15,7 +15,7 @@ import Autoplay from "embla-carousel-autoplay"
 import React from 'react';
 
 export default function ConexaoPage() {
-  const whatsappLink = 'https://api.whatsapp.com/send?phone=5521965332349&text=Tenho%20interesse%20em%20ter%20meu%20proprio%20sistema%2C%20como%20funciona%3F';
+  const whatsappLink = 'https://api.whatsapp.com/send?phone=5521965332349&text=Vim%20pelo%20anuncio%2C%20tenho%20interesse%20em%20ter%20minha%20plataforma%2C%20me%20manda%20os%20modelos..';
   
   const handleButtonClick = () => {
     fbq('trackCustom', 'chamounozap');
