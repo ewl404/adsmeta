@@ -79,7 +79,7 @@ export default function ConexaoPage() {
                   </h1>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 w-full max-w-3xl py-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 w-full max-w-3xl py-2">
                   {features.map((feature) => (
                     <div key={feature} className="flex items-center justify-center sm:justify-start gap-3 p-3 rounded-lg bg-gray-900/50">
                       <BadgeCheck className="h-5 w-5 text-primary shrink-0" />
@@ -88,7 +88,7 @@ export default function ConexaoPage() {
                   ))}
                 </div>
 
-                <div className="flex flex-col items-center space-y-4 pt-4">
+                <div className="flex flex-col items-center space-y-4 pt-2">
                   <Button
                     onClick={handleButtonClick}
                     size="lg"
