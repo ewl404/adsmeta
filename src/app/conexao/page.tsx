@@ -5,11 +5,10 @@ import { WhatsappIcon } from '@/components/icons/whatsapp-icon';
 import { BadgeCheck } from 'lucide-react';
 import Image from 'next/image';
 import Script from 'next/script';
-import { ConexaoScratchCard } from '@/components/conexao-scratch-card';
 import { fbq } from '@/lib/fpixel';
 
 export default function ConexaoPage() {
-  const whatsappLink = 'https://api.whatsapp.com/send?phone=5521965332349&text=Tenho%20interesse%20em%20ter%20meu%20proprio%20sistema%20de%20raspadinha%2C%20como%20funciona%3F';
+  const whatsappLink = 'https://api.whatsapp.com/send?phone=5521965332349&text=Tenho%20interesse%20em%20ter%20meu%20proprio%20sistema%2C%20como%20funciona%3F';
   
   const handleButtonClick = () => {
     fbq('trackCustom', 'chamounozap');
@@ -53,17 +52,16 @@ export default function ConexaoPage() {
           <section className="w-full max-w-4xl text-center">
             <div className="container px-4 md:px-6">
               <div className="flex flex-col items-center space-y-4">
-                <ConexaoScratchCard />
                 <div className="space-y-2">
                   <h1 className="text-4xl font-black tracking-tighter sm:text-5xl md:text-6xl text-accent animate-fade-in-down">
                     Deixe de ser afiliado e seja Dono!
                   </h1>
                   <p className="text-sm md:text-base text-foreground/80 max-w-3xl mx-auto">
-                    Sua própria plataforma de raspadinhas, com sua marca e suporte.
+                    Sua própria plataforma, com sua marca e suporte.
                   </p>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 w-full max-w-2xl">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 w-full max-w-2xl py-8">
                   {features.map((feature) => (
                     <div key={feature} className="flex items-center justify-center sm:justify-start gap-3 p-2 rounded-lg bg-gray-900/50">
                       <BadgeCheck className="h-5 w-5 text-primary" />
