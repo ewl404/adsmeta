@@ -95,7 +95,7 @@ export default function ConexaoPage() {
                     className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg py-8 px-10 rounded-full shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out shadow-primary/40"
                   >
                     <WhatsappIcon className="mr-3 h-8 w-8" />
-                    Fale Conosco
+                    FALAR NO WHATSAPP
                   </Button>
                   <p className="text-xs text-muted-foreground">Toque no botão para falar com um especialista</p>
                 </div>
