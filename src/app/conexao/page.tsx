@@ -133,13 +133,13 @@ export default function ConexaoPage() {
         
           <div className="text-center pt-8 pb-4">
               <a 
-                href="https://www.instagram.com/conexaoigaming2" 
+                href="https://www.instagram.com/conexaoigamingofc" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 text-muted-foreground hover:text-white transition-colors"
               >
                   <Instagram className="w-5 h-5" />
-                  <span>@conexaoigaming2</span>
+                  <span>@conexaoigamingofc</span>
               </a>
           </div>
 
